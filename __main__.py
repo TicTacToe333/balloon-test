@@ -1,5 +1,5 @@
 import time
-
+import random
 from balloon import Balloon
 from clown import Clown
 
@@ -9,10 +9,10 @@ def current_time_ms():
 clown = Clown()
 print(current_time_ms())
 first_balloon = clown.buy_balloon(3)
-second_balloon = Balloon("Blue")
+second_balloon = clown.buy_balloon(3)
 balloon_list = []
 for i in range(10):
-    balloon_list.append(Balloon("Green"))
+    balloon_list.append(clown.buy_balloon(random.randint(1,13)))
 
 first_balloon().update(current_time_ms())
 first_balloon.pop()

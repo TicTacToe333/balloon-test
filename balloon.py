@@ -26,3 +26,8 @@ class Balloon:
             self.decrease_air(delta_ms)
         
         self.update_time_ms = time_ms
+
+    def fill(self, volume_ml):
+        self.volume_ml += volume_ml
+        if self.volume_ml > self.max_volume_ml:
+            self.pop()

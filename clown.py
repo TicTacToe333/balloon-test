@@ -3,7 +3,7 @@ from balloon import Balloon
 
 class Clown:
     def __init__(self):
-        self.tank = Tank()
+        self.tank = Tank("Helium")
         self.money = 0
 
     def buy_balloon(self, cost):
