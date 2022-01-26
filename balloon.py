@@ -1,7 +1,9 @@
 import time
 
+from thing import Balloon
+
 def current_time_ms():
-    return round(time.time()) * 1000)
+    return round (time.time() * 1000)
 
 print(current_time_ms())
 first_balloon = Balloon()
