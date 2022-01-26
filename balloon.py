@@ -1,20 +1,24 @@
-import time
+class Balloon:
+    def __init__(self):
+        self.popped = False
+        self.sealed = False
+        self.color =  None
+        self.volume_ml = 0
+        self.max_volume_ml = None
+        self.update_time_ms = 0
+    
+    def pop():
+        pass
 
-from thing import Balloon
+    def decrease_air(self,delta_ms):
+        pass
 
-def current_time_ms():
-    return round (time.time() * 1000)
+    def update(time_ms):
+        delta_ms = time_ms - self.update_time_ms
 
-print(current_time_ms())
-first_balloon = Balloon()
-second_balloon = Balloon()
-balloon_list = []
-for i in range(10):
-    balloon_list.append(Balloon("Green"))
-
-first_balloon().update(current_time_ms())
-first_balloon.pop()
-
-for balloon in balloon_list:
-    print(balloon)
-    print(f"Other way: {balloon.color}: {balloon.volume_ml}")
+        if self.popped:
+            self.volume_ml = 0
+        elif not self.sealed and self.volume_ml > 0:
+            self.decrease_air(delta_ms)
+        
+        self.update_time_ms = time_ms
