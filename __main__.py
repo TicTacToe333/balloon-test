@@ -1,13 +1,15 @@
 import time
 
-from __main__ import Balloon
+from balloon import Balloon
+from clown import Clown
 
 def current_time_ms():
     return round (time.time() * 1000)
 
+clown = Clown()
 print(current_time_ms())
-first_balloon = Balloon()
-second_balloon = Balloon()
+first_balloon = clown.buy_balloon(3)
+second_balloon = Balloon("Blue")
 balloon_list = []
 for i in range(10):
     balloon_list.append(Balloon("Green"))

@@ -1,3 +1,6 @@
+from operator import truediv
+
+
 class Balloon:
     def __init__(self):
         self.popped = False
@@ -7,13 +10,14 @@ class Balloon:
         self.max_volume_ml = None
         self.update_time_ms = 0
     
-    def pop():
+    def pop(self):
+        self.popped = True
+        self.volume_ml = 0
+
+    def decrease_air(self, delta_ms):
         pass
 
-    def decrease_air(self,delta_ms):
-        pass
-
-    def update(time_ms):
+    def update(self, time_ms):
         delta_ms = time_ms - self.update_time_ms
 
         if self.popped:
