@@ -9,4 +9,11 @@ class Tank:
             if amount <= self.volume_L:
                 self.volume_L -= amount
             else:
-                pass
+                amount = self.volume_L
+                self.volume_L = 0
+                return amount * 1000
+
+        def fill(self, air_type = None):
+            if air_type is not None:
+                self.air_type = air_type
+            self.volume_L = self.max_volume_L
